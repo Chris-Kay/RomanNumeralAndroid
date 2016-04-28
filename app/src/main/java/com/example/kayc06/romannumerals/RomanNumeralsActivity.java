@@ -44,7 +44,6 @@ public class RomanNumeralsActivity extends AppCompatActivity {
         if(number < 1) {
             return  "";
         }
-        if(number == 9) {return  "IX";}
         if(number >= 500){ return "D" + getConvertedString(number - 500);}
         if(number >= 400){ return "CD" + getConvertedString(number - 400);}
         if(number >= 100){ return "C" + getConvertedString(number - 100);}
@@ -52,7 +51,7 @@ public class RomanNumeralsActivity extends AppCompatActivity {
         if(number >= 50){ return "L" + getConvertedString(number - 50);}
         if(number >= 40){ return "XL" + getConvertedString(number - 40);}
         if(number >= 10){ return "X" + getConvertedString(number - 10);}
-        if(number >= 9){ return "IX" + getConvertedString(number - 9);}
+        if(number >= 9){ return "IX";}
         if(number >= 5) {return  "V" + getConvertedString(number - 5);}
         if(number == 4) {return  "IV";}
         if(number >= 1) {return  "I" + getConvertedString(number - 1);}
