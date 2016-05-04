@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RomanNumerals</string>
+    <string name="enter_number_string">Enter Number...</string>
 </resources>

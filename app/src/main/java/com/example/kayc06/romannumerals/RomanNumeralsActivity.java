@@ -15,6 +15,10 @@ public class RomanNumeralsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_roman_numerals);
 
         final EditText editText = (EditText) findViewById(R.id.roman_numeral_input);
+        final TextView heading = (TextView) findViewById(R.id.heading);
+        if (heading != null) {
+            heading.setText(R.string.enter_number_string);
+        }
 
         assert editText != null;
         editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -35,6 +39,7 @@ public class RomanNumeralsActivity extends AppCompatActivity {
         TextView converted = (TextView) findViewById(R.id.converted_number);
         String convertedValue;
         convertedValue = getConvertedString(number);
+        assert converted != null;
         converted.setText(convertedValue);
 
         return convertedValue;
@@ -44,6 +49,7 @@ public class RomanNumeralsActivity extends AppCompatActivity {
         if(number < 1) {
             return  "";
         }
+        
         if(number >= 500){ return "D" + getConvertedString(number - 500);}
         if(number >= 400){ return "CD" + getConvertedString(number - 400);}
         if(number >= 100){ return "C" + getConvertedString(number - 100);}
